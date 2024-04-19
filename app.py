@@ -192,7 +192,7 @@ def app():
     # Show the editable table
     st.info("Cột choice: Các đáp án cách nhau bởi dấu ; (chấm phẩy) và không có dấu cách")
     st.info("Lưu ý: Tổng xác suất p của một câu hỏi phải bằng 1")
-    st.info("Cột one_choice: Tích chọn nếu câu hỏi chỉ chọn 1 lựa chọn, bỏ chọn nếu chọn nhiều lựa chọn")
+    st.info("Cột one_choice: Tích chọn nếu câu hỏi chỉ được chọn một lựa chọn, bỏ chọn nếu được chọn nhiều lựa chọn")
     st.write("Thiết lập dữ liệu giả lập vào bảo dưới đây!!!")
     data = st.data_editor(
         pd.DataFrame(data),
