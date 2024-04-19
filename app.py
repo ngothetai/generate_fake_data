@@ -191,6 +191,7 @@ def app():
     
     # Show the editable table
     st.info("Cột choice: Các đáp án cách nhau bởi dấu ; (chấm phẩy) và không có dấu cách")
+    st.info("Phải điền đủ các giá trị xác suất tương ứng với từng đáp án kể cả xác suất 0 (VD: Câu có 5 đáp án thì cột p cũng phải có 5 xác suất)")
     st.info("Lưu ý: Tổng xác suất p của một câu hỏi phải bằng 1")
     st.info("Cột one_choice: Tích chọn nếu câu hỏi chỉ được chọn một lựa chọn, bỏ chọn nếu được chọn nhiều lựa chọn")
     st.write("Thiết lập dữ liệu giả lập vào bảo dưới đây!!!")
