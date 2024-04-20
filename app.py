@@ -53,6 +53,18 @@ def init_db():
             "one_choice": True
         },
         {
+            "ques": '1. Ứng dụng CNTT [Ứng dụng dạy học kết hợp đem lại hiệu quả cao hơn trong học tập]',
+            "choice": "Hoàn toàn không đồng ý;Không đồng ý;Bình thường;Đồng ý;Hoàn toàn đồng ý",
+            "p": "0;0.1;0.3;0.2;0.4",
+            "one_choice": True
+        },
+        {
+            "ques": '1. Ứng dụng CNTT [Đa dạng tài liệu, hỗ trợ quá trình tiếp cận thông tin một cách nhanh chóng và chính thống]',
+            "choice": "Hoàn toàn không đồng ý;Không đồng ý;Bình thường;Đồng ý;Hoàn toàn đồng ý",
+            "p": "0;0.1;0.3;0.2;0.4",
+            "one_choice": True
+        },
+        {
             "ques": '2. Lợi ích của CNTT [Bạn sử dụng CNTT để tìm và phân tích tài liệu]',
             "choice": "Hoàn toàn không đồng ý;Không đồng ý;Bình thường;Đồng ý;Hoàn toàn đồng ý",
             "p": "0;0;0.1;0.25;0.65",
@@ -194,6 +206,7 @@ def app():
     st.info("Phải điền đủ các giá trị xác suất tương ứng với từng đáp án kể cả xác suất 0 (VD: Câu có 5 đáp án thì cột p cũng phải có 5 xác suất)")
     st.info("Lưu ý: Tổng xác suất p của một câu hỏi phải bằng 1")
     st.info("Cột one_choice: Tích chọn nếu câu hỏi chỉ được chọn một lựa chọn, bỏ chọn nếu được chọn nhiều lựa chọn")
+    st.info("Nếu muốn khôi phục lại thiết lập câu hỏi gốc ban đầu -> Tải lại trang (F5)")
     st.write("Thiết lập dữ liệu giả lập vào bảo dưới đây!!!")
     data = st.data_editor(
         pd.DataFrame(data),
