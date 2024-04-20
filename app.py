@@ -167,7 +167,6 @@ def gen_multi_choice_data(num_samples, questions):
                         p=p,
                         replace=False
                     )
-
                 else:
                     num_choices = np.random.randint(1, len(a))
                     selected_options = np.random.choice(
@@ -179,6 +178,7 @@ def gen_multi_choice_data(num_samples, questions):
                 responses[question] = selected_options
             except Exception as e:
                 print(f"Error at question: {question} - {e}")
+                return None
         fake_data.append(responses)
         st.warning(f"Error: {e}")
 
