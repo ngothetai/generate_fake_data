@@ -152,10 +152,10 @@ def gen_multi_choice_data(num_samples, questions):
     # Tạo dữ liệu giả lập
     fake_data = []
 
-    try:
-        for _ in range(num_samples):
-            responses = {}
-            for question, options in questions.items():
+    for _ in range(num_samples):
+        responses = {}
+        for question, options in questions.items():
+            try:
                 # Chọn ngẫu nhiên ít nhất 2 lựa chọn cho mỗi câu hỏi
                 a = np.array(split_choices_str(options['choice']))
                 p = np.array(split_choices_float(options['p']))
@@ -177,8 +177,9 @@ def gen_multi_choice_data(num_samples, questions):
                         replace=False
                     )
                 responses[question] = selected_options
-            fake_data.append(responses)
-    except Exception as e:
+            except Exception as e:
+                print(f"Error at question: {question} - {e}")
+        fake_data.append(responses)
         st.warning(f"Error: {e}")
 
     # Kiểm tra phân phối của các lựa chọn đã chọn
